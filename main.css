@@ -1,16 +1,120 @@
 :root {
-
+  --ff-main: "Roboto", sans-serif;
+  --transition: all 0.3s linear;
+  --ff-secondary: "Open Sans", sans-serif;
+  --light-blue: #ADD8E6; 
+  --light-gray: #D3D3D3;
+  --black: #000000;
+  --white: #FFFFFF;
+  --light-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+  --shadow: 0px 5px 15px rgba(0,0,0,0.2);
+  --orange-pastel: #ffcaaf;
+  --brown-pastel: #dab894;
+  --yellow-pastel: #f1ffc4;
+  --lilac-pastel: #957DAD;
+  --main-font: #99CCFF;
 }
-.hello-life {
-  line-height: 500px;
-  top:9px;
-  max-width: 100%;
-  margin: auto;
-  width: 10%;
-  font-weight: bold;
-  font-style: normal;
-  font-family: Helvetica;
-  position: absolute;
-  margin-left:auto;
-  margin-right:auto;
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--ff-secondary);
+  background-color: var(--light-blue);
+  color: var(--black);
+  line-height: 1.5;
+  font-size: 0.875rem;
+  background-image: linear-gradient(90,#99CCFF, #ADD8E6);
+}
+.btn {
+  font-family: var(--ff-main);
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--light-gray);
+  display: inline-block;
+  font-weight: 700;
+  transition: var(--transition);
+  border: 2px solid var(--black);
+  cursor: pointer;
+  border-radius: 0.25rem;
+  box-shadow: 0px 1px 3px rgba(0,0,0,0,2);
+  padding: 0.75rem 1.25rem;
+}
+.btn:hover {
+  color: var(--white);
+  background: var(--black);
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
+h1,
+h2 {
+  letter-spacing: 0.1rem;
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: var(--ff-main);
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+.nav-links {
+  display: flex;
+}
+main {
+  min-height: calc(100vh - 3rem);
+  display: grid;
+  place-items: center;
+}
+.container {
+  text-align: center;
+}
+.container h2 {
+  background: var(--lilac-pastel);
+  color: var(--white);
+  padding: 2rem;
+  border-radius: 0.25rem;
+  margin-bottom: 2.5rem;
+}
+.color {
+  color: var(--white);
+}
+
+nav a {
+  text-transform: capitalize;
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: var(--lilac-pastel);
+  letter-spacing: 0.1rem;
+  margin-right: 1rem;
+}
+.nav-center h1 {
+  margin-bottom: 0;
+  color: var(--main-font);
+  font-weight: 300;
+  text-shadow: 1.3px 1.3px #000000;
+}
+.nav-center {
+  width: 90vw;
+  max-width: 1800px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav {
+  background: var(--white);
+  height: 9rem;
+  display: grid;
+  align-items: center;
+  box-shadow: var(--shadow);
 }
